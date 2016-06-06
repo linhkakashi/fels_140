@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
 
+  mount_uploader :avatar, AvatarUploader
+
   before_save{self.email = email.downcase}
   has_secure_password
 end

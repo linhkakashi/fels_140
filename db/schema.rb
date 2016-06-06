@@ -52,13 +52,6 @@ ActiveRecord::Schema.define(version: 20160603092020) do
   add_index "lessons", ["category_id"], name: "index_lessons_on_category_id"
   add_index "lessons", ["user_id"], name: "index_lessons_on_user_id"
 
-  create_table "ralationships", force: :cascade do |t|
-    t.integer  "followed_id"
-    t.integer  "follower"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -72,7 +65,7 @@ ActiveRecord::Schema.define(version: 20160603092020) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "avata"
+    t.string   "avatar"
     t.string   "email"
     t.string   "password_digest"
     t.boolean  "role"
