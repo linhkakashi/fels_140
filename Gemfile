@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails", "4.2.6"
+gem "bootstrap-sass", "3.2.0.0"
 gem "bcrypt", "3.1.7"
 gem "sqlite3"
 gem "sass-rails", "~> 5.0"
