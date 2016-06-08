@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160603092020) do
+ActiveRecord::Schema.define(version: 20160607184430) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "target_id"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20160603092020) do
     t.boolean  "role"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "remember_digest"
   end
 
   create_table "word_answers", force: :cascade do |t|

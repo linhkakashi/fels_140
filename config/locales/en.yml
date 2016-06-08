@@ -31,12 +31,16 @@ en:
     introduction: "This is first tranning application."
     sign_up: "Sign up now!"
     login: "Log in"
+    logout: "Log out"
     sign_up_title: "Sign up"
     the: "The"
     by: "by"
     ruby_on_rails: "Ruby on Rails Tutorial"
     book: "book"
     logo: "Rails logo"
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
 
   help_page:
     sentence_intro: "Get help on the Ruby on Rails Tutorial at the"
@@ -51,3 +55,14 @@ en:
   form:
     create: "Create"
     confirmation: "Confirmation"
+
+  noti:
+    error_signin: "Invalid email/password combination"
+
+  header:
+    categories: "Categories"
+    user: "User"
+
+  login_page:
+    remember_me: "Remember me on this computer"
+    sentence_user: "New user?"
