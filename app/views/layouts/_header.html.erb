@@ -6,7 +6,7 @@
         <li><%= link_to t("static_pages.home"), root_path %></li>
         <li><%= link_to t("static_pages.help"), help_path %></li>
         <% if logged_in? %>
-          <% if is_manager? %>
+          <% if current_user.is_admin? %>
             <li><%= link_to t("header.categories"), "#" %></li>
             <li><%= link_to t("header.user"), "#" %></li>
           <% else %>

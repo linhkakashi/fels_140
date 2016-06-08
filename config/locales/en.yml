@@ -51,13 +51,18 @@ en:
   error:
     sentence_content: "The form contains "
     er: "error"
+    pl_login: "Please log in."
 
   form:
     create: "Create"
     confirmation: "Confirmation"
+    update: "Update"
+    delete: "Delete"
 
-  noti:
+  notice:
     error_signin: "Invalid email/password combination"
+    pls_login: "Please log in."
+    pls_admin: "Please log in with an admin account."
 
   header:
     categories: "Categories"
@@ -66,3 +71,5 @@ en:
   login_page:
     remember_me: "Remember me on this computer"
     sentence_user: "New user?"
+  title:
+    all_users: "All users"
