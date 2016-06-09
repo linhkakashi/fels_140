@@ -63,6 +63,9 @@ en:
     error_signin: "Invalid email/password combination"
     pls_login: "Please log in."
     pls_admin: "Please log in with an admin account."
+    profile_update: "Profile updated"
+    delete_confirm: "You sure?"
+    delete_success: "User deleted"
 
   header:
     categories: "Categories"
@@ -73,3 +76,4 @@ en:
     sentence_user: "New user?"
   title:
     all_users: "All users"
+    edit_user: "Edit user"
