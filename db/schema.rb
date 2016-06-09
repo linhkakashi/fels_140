@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20160607184430) do
     t.string   "avatar"
     t.string   "email"
     t.string   "password_digest"
-    t.boolean  "role"
+    t.boolean  "is_admin"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "remember_digest"

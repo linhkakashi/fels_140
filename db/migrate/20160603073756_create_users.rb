@@ -5,7 +5,7 @@
       t.string :avatar
       t.string :email
       t.string :password_digest
-      t.boolean :role
+      t.boolean :is_admin
 
       t.timestamps null: false
     end

@@ -11,4 +11,9 @@ Rails.application.routes.draw do
 
   get "signup" => "users#new"
   resources :users
+
+  namespace :admin do
+    root "users#index"
+    resources :users
+  end
 end

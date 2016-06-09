@@ -13,6 +13,8 @@ gem "carrierwave"
 gem "rmagick"
 gem "jbuilder", "~> 2.0"
 gem "config"
+gem "will_paginate"
+gem "bootstrap-will_paginate"
 gem "sdoc", "~> 0.4.0", group: :doc
 
 group :development, :test do

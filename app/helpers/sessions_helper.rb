@@ -25,10 +25,6 @@ module SessionsHelper
     current_user.present?
   end
 
-  def is_manager?
-    current_user.role
-  end
-
   def forget user
     user.forget
     cookies.delete :user_id
@@ -39,5 +35,29 @@ module SessionsHelper
     forget current_user
     session.delete :user_id
     @current_user = nil
+  end
+
+  def verify_user
+    unless current_user.is_admin?
+      flash[:danger] = t "notice.pls_admin"
+      redirect_to root_path
+    end
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t "notice.pls_login"
+      redirect_to login_url
+    end
+  end
+
+  def redirect_back_or default
+    redirect_to session[:forwarding_url] || default
+    session.delete :forwarding_url
+  end
+
+  def store_location
+    session[:forwarding_url] = request.url if request.get?
   end
 end
