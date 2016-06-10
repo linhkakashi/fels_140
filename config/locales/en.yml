@@ -66,6 +66,9 @@ en:
     profile_update: "Profile updated"
     delete_confirm: "You sure?"
     delete_success: "User deleted"
+    create_category_success: "Category created success!"
+    update_category_success: "Category updated success!"
+    deleted_category_success: "Category deleted success!"
 
   header:
     categories: "Categories"
@@ -77,3 +80,6 @@ en:
   title:
     all_users: "All users"
     edit_user: "Edit user"
+    all_categories: "All categories"
+    create_category: "Create category"
+    update_category: "Update category"
