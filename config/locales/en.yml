@@ -58,6 +58,8 @@ en:
     confirmation: "Confirmation"
     update: "Update"
     delete: "Delete"
+    follow: "Follow"
+    unfollow: "Unfollow"
 
   notice:
     error_signin: "Invalid email/password combination"
@@ -77,9 +79,14 @@ en:
   login_page:
     remember_me: "Remember me on this computer"
     sentence_user: "New user?"
+
   title:
     all_users: "All users"
     edit_user: "Edit user"
     all_categories: "All categories"
     create_category: "Create category"
     update_category: "Update category"
+
+  follow_user:
+    following: "Following"
+    followers: "Followers"

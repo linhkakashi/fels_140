@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     resources :users
     resources :categories
   end
+
+  resources :relationships, only: [:create, :destroy, :index]
 end
