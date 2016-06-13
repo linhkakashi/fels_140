@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20160607184430) do
 
   create_table "word_answers", force: :cascade do |t|
     t.string   "content"
+    t.boolean  "is_correct"
     t.integer  "word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

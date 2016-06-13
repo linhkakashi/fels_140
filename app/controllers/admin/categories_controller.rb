@@ -7,6 +7,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def show
+    @words = @category.words
   end
 
   def new

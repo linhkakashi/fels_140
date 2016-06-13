@@ -60,6 +60,14 @@ en:
     delete: "Delete"
     follow: "Follow"
     unfollow: "Unfollow"
+    create_word: "Create word"
+    add_answer_word: "Add answer word"
+    remove_answer_word_field: "X"
+    answer_words: "Answer words"
+    is_correct: "Is correct"
+    remove: "Remove"
+    word_content: "Word content"
+    word: "Word"
 
   notice:
     error_signin: "Invalid email/password combination"
@@ -71,6 +79,7 @@ en:
     create_category_success: "Category created success!"
     update_category_success: "Category updated success!"
     deleted_category_success: "Category deleted success!"
+    create_word_success: "Create word success!"
 
   header:
     categories: "Categories"
@@ -86,6 +95,9 @@ en:
     all_categories: "All categories"
     create_category: "Create category"
     update_category: "Update category"
+    category_info: "Category information"
+    create_word: "Create word"
+    word_info: "Word information"
 
   follow_user:
     following: "Following"

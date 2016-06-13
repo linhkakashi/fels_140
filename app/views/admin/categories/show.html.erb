@@ -1,0 +1,11 @@
+<% provide :title, t("title.category_info") %>
+<h1><%= @category.name %></h1>
+<%= link_to t("form.create_word"), new_admin_word_path(id: @category),
+  class: "btn btn-lg btn-primary" %>
+</br>
+<ul>
+  <% @words.each do |word| %>
+    <li><%= link_to word.content, admin_word_path(word) %></li>
+    <hr>
+  <% end %>
+</ul>
