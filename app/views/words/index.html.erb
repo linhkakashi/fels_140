@@ -1,0 +1,18 @@
+<% provide :title, t("title.words_list") %>
+
+<%= form_tag words_path, method: :get do %>
+
+<%= select_tag :category_id, options_from_collection_for_select(@categories,
+  :id, :name, params[:category_id]), include_blank: t("form.blank") %>
+
+  <% Settings["fillter_types"].each do |type|%>
+    <ul class="radio-inline">
+      <%= radio_button_tag :word_type, type, params[:word_type] == type %>
+      <%= label_tag type %>
+    </ul>
+  <% end %>
+
+<%= submit_tag t("form.fillter"), class: "btn btn-primary" %>
+<% end %>
+
+<%= render "word_list" %>
