@@ -1,0 +1,9 @@
+<% provide :title, t("title.word_info") %>
+<h1><%= @word.content %></h1>
+</br>
+<ul>
+  <% @word_answers.each do |word_answer| %>
+    <li><%= word_answer.content %></li>
+    <hr>
+  <% end %>
+</ul>
