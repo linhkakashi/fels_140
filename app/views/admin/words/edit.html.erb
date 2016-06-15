@@ -1,0 +1,33 @@
+<% provide :title, t("title.update_word") %>
+<h1><%= t "title.update_word" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @word] do |f| %>
+      <%= render "shared/error_messages", object: @word %>
+      <div>
+        <div class="panel panel-info">
+          <div class="panel panel-heading">
+            <h3 class="panel-title text-center"><%= t "form.word" %></h3>
+          </div>
+          <div class="panel-body">
+            <%= f.label :content, t("form.word_content") %>
+            <%= f.text_field :content, class: "form-control" %>
+            <%= link_to_add_fields t("form.add_answer_word"), f, :word_answers %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <%= f.label :word_answers, t("form.add_answer_word") %>
+        <hr>
+      </div>
+      <div class="form-group">
+        <%= render "word_answer_label" %>
+        <%= f.fields_for :word_answers do |word_answer| %>
+          <%= render "word_answer_fields", f: word_answer %>
+        <% end %>
+      </div>
+      <%= f.submit t("form.update"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

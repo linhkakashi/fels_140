@@ -1,8 +1,8 @@
 class Admin::WordsController < ApplicationController
   before_action :logged_in_user, :verify_user
+  before_action :load_word, only: [:show, :edit, :update]
 
   def show
-    @word = Word.find_by id: params[:id]
     @word_answers = @word.word_answers
   end
 
@@ -22,9 +22,25 @@ class Admin::WordsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @word.update_attributes word_params
+      flash[:success] = t "notice.update_word_success"
+      redirect_to admin_category_path @word.category
+    else
+      render :edit
+    end
+  end
+
   private
   def word_params
     params.require(:word).permit :category_id, :content,
       word_answers_attributes: [:id, :content, :is_correct, :_destroy]
+  end
+
+  def load_word
+    @word = Word.find_by id: params[:id]
   end
 end
