@@ -5,7 +5,11 @@
 </br>
 <ul>
   <% @words.each do |word| %>
-    <li><%= link_to word.content, admin_word_path(word) %></li>
+    <li>
+      <%= word.content %>
+      <%= link_to t("form.show"), admin_word_path(word) %>
+      <%= link_to t("form.update"), edit_admin_word_path(word) %>
+    </li>
     <hr>
   <% end %>
 </ul>

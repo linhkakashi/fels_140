@@ -58,6 +58,7 @@ en:
     confirmation: "Confirmation"
     update: "Update"
     delete: "Delete"
+    show: "Show"
     follow: "Follow"
     unfollow: "Unfollow"
     create_word: "Create word"
@@ -80,6 +81,7 @@ en:
     update_category_success: "Category updated success!"
     deleted_category_success: "Category deleted success!"
     create_word_success: "Create word success!"
+    update_word_success: "Update word success!"
     update_user_success: "Update user success!"
 
   header:
@@ -99,6 +101,7 @@ en:
     category_info: "Category information"
     create_word: "Create word"
     word_info: "Word information"
+    update_word: "Update word"
 
   follow_user:
     following: "Following"
