@@ -109,3 +109,19 @@ en:
   follow_user:
     following: "Following"
     followers: "Followers"
+
+  sentence:
+    follow: " follow "
+    unfollow: " unfollow "
+    learned: "Learned"
+    lesson: "word in Lesson"
+
+  user:
+    activity: "Activity"
+
+  button:
+    words: "Words"
+    lesson: "Lesson"
+
+  time:
+    type: "%d/%m/%Y"

@@ -1,2 +1,4 @@
-<%= image_tag user.avatar_url(:thumb), size: Settings["AVATAR_SMALL_SIZE"] %>
-<%= user.name %>
+<div>
+  <%= image_tag user.avatar_url(:thumb), size: Settings["AVATAR_SMALL_SIZE"] %>
+  <strong class="text-capitalize"><%= user.name %></strong>
+</div>
