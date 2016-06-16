@@ -3,3 +3,11 @@ CHECK_BOX_TRUE: "1"
 AVATAR_SMALL_SIZE: "70"
 PAGE_SIZE: 10
 MIN_ANSWER_NUMBER: 1
+WORD_PAGE_SIZE: 15
+fillter_types:
+  - "learned"
+  - "not learn"
+  - "all"
+all: "all"
+not learn: "not learn"
+not_learn: "not_learn"

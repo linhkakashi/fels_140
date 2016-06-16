@@ -69,6 +69,8 @@ en:
     remove: "Remove"
     word_content: "Word content"
     word: "Word"
+    fillter: "Fillter"
+    blank: "--------------"
 
   notice:
     error_signin: "Invalid email/password combination"
@@ -102,6 +104,7 @@ en:
     create_word: "Create word"
     word_info: "Word information"
     update_word: "Update word"
+    words_list: "Word list"
 
   follow_user:
     following: "Following"
