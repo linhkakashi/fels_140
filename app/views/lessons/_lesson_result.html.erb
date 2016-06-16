@@ -1,0 +1,16 @@
+<div class="title">
+  <div>
+    <h2><%= t "title.result" %></h2>
+    <h2><%= "#{@lesson.result} / #{@lesson_words.size}" %></h2>
+  </div>
+</div>
+<div class="panel-body">
+  <table class="table">
+    <thead>
+      <th><%= t "lesson.word" %></th>
+      <th><%= t "lesson.meaning" %></th>
+      <th><%= t "lesson.result" %></th>
+    </thead>
+    <%= render partial: "result", collection: @lesson_words %>
+  </table>
+</div>
