@@ -1,0 +1,18 @@
+<% provide :title, t("title.all_categories") %>
+<h1><%= t "title.all_categories" %></h1>
+
+<%= will_paginate %>
+
+<ul class="categories">
+  <% @categories.each do |category| %>
+    <li>
+      <%= category.name %>
+      <%= form_for category.lessons.build do |f| %>
+        <%= f.hidden_field :category_id %>
+        <%= f.submit t("form.start_lesson"), class: "btn btn-primary" %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

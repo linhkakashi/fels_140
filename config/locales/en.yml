@@ -71,6 +71,9 @@ en:
     word: "Word"
     fillter: "Fillter"
     blank: "--------------"
+    start_lesson: "Start lesson"
+    invalid: "Invalid"
+    submit_answer: "Submit answer"
 
   notice:
     error_signin: "Invalid email/password combination"
@@ -105,6 +108,8 @@ en:
     word_info: "Word information"
     update_word: "Update word"
     words_list: "Word list"
+    lesson: "Lesson"
+    result: "Result"
 
   follow_user:
     following: "Following"
