@@ -1,0 +1,11 @@
+<tr>
+  <td><%= result.word.content %></td>
+  <td><%= result.word_answer.content %></td>
+  <td>
+    <% if result.word_answer.is_correct? %>
+      <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+    <% else %>
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    <% end %>
+  </td>
+</tr>

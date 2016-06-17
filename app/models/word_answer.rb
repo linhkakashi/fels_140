@@ -3,4 +3,6 @@ class WordAnswer < ActiveRecord::Base
   belongs_to :word
 
   validates :content, presence: true, length: {maximum: 20}
+
+  scope :check_correct, ->(ids){where id: ids, is_correct: true}
 end

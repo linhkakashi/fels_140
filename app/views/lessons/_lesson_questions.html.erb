@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="title">
+      <h2><%= @lesson.category.name %></h2>
+    </div>
+    <hr>
+    <%= form_for @lesson do |f| %>
+      <%= f.fields_for :lesson_words do |ff| %>
+        <div class="word-list">
+          <h3><%= ff.object.word.content %></h3>
+          <%= ff.collection_radio_buttons :word_answer_id, ff.object.word.word_answers,
+            :id, :content do |rb| %>
+            <%= rb.label(class: "radio"){rb.radio_button + rb.text} %>
+          <% end %>
+        </div>
+      <% end %>
+      <%= f.submit t("form.submit_answer"), class: "btn btn-primary submit-answer" %>
+    <% end %>
+  </div>
+</div>

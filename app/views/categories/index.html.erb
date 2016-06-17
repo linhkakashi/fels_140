@@ -1,0 +1,26 @@
+<% provide :title, t("title.all_categories") %>
+<h1><%= t "title.all_categories" %></h1>
+<div class="panel-body">
+  <table class="table">
+    <thead>
+      <th><%= t "category.name" %></th>
+      <th><%= t "category.created_at" %></th>
+      <th><%= t "category_id.update_at" %></th>
+      <th></th>
+    </thead>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.created_at.strftime t "time.type" %></td>
+        <td><%= category.updated_at.strftime t "time.type" %></td>
+        <td class="text-center">
+          <%= form_for category.lessons.build do |f| %>
+            <%= f.hidden_field :category_id %>
+            <%= f.submit t("form.start_lesson"), class: "btn btn-primary category_start" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+<%= will_paginate %>
