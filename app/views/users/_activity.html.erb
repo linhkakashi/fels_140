@@ -1,0 +1,22 @@
+<ul>
+  <% @activities.each do |activity| %>
+    <ul>
+      <%= image_tag @user.avatar_url(:thumb), size: Settings["AVATAR_ACTIVITY"] %>
+      <% case activity.action_type %>
+      <% when Settings["follow"] %>
+        <%= t "follow" %>
+        <%= activity.load_user.name %>
+      <% when Settings["unfollow"] %>
+        <%= t "unfollow" %>
+        <%= activity.load_user.name %>
+      <% else %>
+        <%= t "sentence.learned" %>
+        <%= " #{activity.load_lesson.result} " %>
+        <%= t "lesson" %>
+        <%= " #{activity.load_lesson.category.name} " %>
+      <% end %>
+      <%= " - (#{activity.updated_at.strftime t "time.type"})" %>
+    </ul>
+  <% end %>
+  <%= will_paginate @activities %>
+</ul>
