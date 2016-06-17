@@ -3,16 +3,31 @@
 <%= link_to t("form.create"), new_admin_category_path, class: "btn btn-lg btn-primary" %>
 </br>
 <%= will_paginate %>
+<div class="panel-body">
+  <table class="table">
+    <thead>
+      <th><%= t "category.name" %></th>
+      <th><%= t "category.created_at" %></th>
+      <th><%= t "category_id.updated_at" %></th>
+      <th></th>
+    </thead>
+    <% @categories.each do |category| %>
+      <tr>
+        <td class="text-capitalize"><%= category.name %></td>
+        <td><%= category.created_at.strftime t "time.type" %></td>
+        <td><%= category.updated_at.strftime t "time.type" %></td>
+        <td class="text-center">
+          <%= link_to t("form.show"), admin_category_path(category),
+            class: "btn btn-primary category_start" %>
 
-<ul class="categories">
-  <% @categories.each do |category| %>
-    <li>
-      <%= link_to category.name, admin_category_path(category) %>
-      <%= link_to t("form.update"), edit_admin_category_path(category) %>
-      <%= link_to t("form.delete"), admin_category_path(category), method: :delete,
-        data:{confirm: t("notice.delete_confirm")} %>
-    </li>
-  <% end %>
-</ul>
+          <%= link_to t("form.update"), edit_admin_category_path(category),
+            class: "btn btn-primary category_start"%>
 
+          <%= link_to t("form.delete"), admin_category_path(category), method: :delete,
+            data:{confirm: t("notice.delete_confirm")}, class: "btn btn-primary category_start" %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 <%= will_paginate %>

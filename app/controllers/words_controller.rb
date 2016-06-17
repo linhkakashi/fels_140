@@ -7,8 +7,8 @@ class WordsController < ApplicationController
       params[:word_type] = Settings["all"]
       @words = Word.paginate(page: params[:page]).per_page Settings["WORD_PAGE_SIZE"]
     else
-      @words = Word.send("#{type}_words", current_user.id, category_ids)
-        .paginate(page: params[:page]).per_page Settings["WORD_PAGE_SIZE"]
+      @words = Word.send("#{type}_words", current_user.id, category_ids).uniq
+       .paginate(page: params[:page]).per_page Settings["WORD_PAGE_SIZE"]
     end
   end
 

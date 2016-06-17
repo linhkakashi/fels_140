@@ -97,6 +97,7 @@ en:
     word: "Word"
     meaning: "Chosen Meaning"
     result: "Result"
+
   Category:
     name: "Name"
     created_at: "Created at"
